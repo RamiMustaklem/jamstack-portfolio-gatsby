@@ -13,13 +13,15 @@ const About = ({
 
   return (
     <Layout>
-      <SEO title="About Me" description="about webdev" />
+      <SEO title="About Me" description="about rami mustaklem" />
       <section className="about-page">
         <div className="section-center about-center">
           <Image fluid={image.childImageSharp.fluid} className="about-img" />
           <article className="about-text">
             <Title title={title} />
-            <p>{info}</p>
+            <p
+              dangerouslySetInnerHTML={{ __html: info.replace(/\\n/g, `\n`) }}
+            />
             <div className="about-stack">
               {stack.map(item => {
                 return <span key={item.id}>{item.title}</span>

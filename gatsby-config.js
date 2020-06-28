@@ -6,12 +6,12 @@
 
 module.exports = {
   siteMetadata: {
-    title: "WebDev Portfolio",
-    description: "This is WebDev Portfolio Site",
-    author: "@webdev",
-    twitterUsername: "@john_smilga",
-    image: "/twitter-img.png",
-    siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
+    title: "Rami Mustaklem Portfolio",
+    description: "This is Rami Mustaklem's Portfolio Site",
+    author: "@RamiMustaklem",
+    twitterUsername: "@RamiMustaklem",
+    image: "/avataaars.png",
+    siteUrl: "https://ramimustaklem.com/",
   },
   plugins: [
     `gatsby-transformer-sharp`,
@@ -28,7 +28,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1337`,
+        apiURL: `http://localhost:1338`,
         queryLimit: 1000, // Default to 100
         // contentTypes: [`jobs`, `projects`, `blogs`, ],
         //singleTypes:[`about` ]

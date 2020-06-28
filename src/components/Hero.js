@@ -5,10 +5,10 @@ import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
 const query = graphql`
   {
-    file(relativePath: { eq: "hero-img.png" }) {
+    file(relativePath: { eq: "avataaars.png" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fixed(width: 500) {
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     }
@@ -17,7 +17,7 @@ const query = graphql`
 const Hero = () => {
   const {
     file: {
-      childImageSharp: { fluid },
+      childImageSharp: { fixed },
     },
   } = useStaticQuery(query)
 
@@ -27,15 +27,15 @@ const Hero = () => {
         <article className="hero-info">
           <div>
             <div className="underline"></div>
-            <h1>i'm john</h1>
-            <h4>freelance web and mobile UI/UX Designer</h4>
+            <h1>i'm rami</h1>
+            <h4>Full stack web developer</h4>
             <Link to="/contact" className="btn">
               contact me
             </Link>
             <SocialLinks />
           </div>
         </article>
-        <Image fluid={fluid} className="hero-img" />
+        <Image fixed={fixed} className="hero-img" />
       </div>
     </header>
   )

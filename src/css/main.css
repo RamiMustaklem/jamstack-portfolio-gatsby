@@ -1,12 +1,12 @@
 /*
-=============== 
+===============
 Fonts
 ===============
 */
 /* @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap"); */
 
 /*
-=============== 
+===============
 Variables
 ===============
 */
@@ -49,7 +49,7 @@ Variables
   --fixed-width: 700px;
 }
 /*
-=============== 
+===============
 Global Styles
 ===============
 */
@@ -192,7 +192,7 @@ p {
   margin-top: 2rem;
   width: 15rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .social-link {
   font-size: 1.75rem;
@@ -203,7 +203,7 @@ p {
   color: var(--clr-primary-5);
 }
 /*
-=============== 
+===============
 Navbar
 ===============
 */
@@ -282,7 +282,7 @@ Navbar
   }
 }
 /*
-=============== 
+===============
 Sidebar
 ===============
 */
@@ -338,7 +338,7 @@ Sidebar
   }
 }
 /*
-=============== 
+===============
 Sidebar Animation
 ===============
 */
@@ -369,6 +369,9 @@ Sidebar Animation
     transform: translateX(0);
     opacity: 1;
   }
+}
+.sidebar-icons {
+  justify-content: center;
 }
 .sidebar-icons li {
   opacity: 0;
@@ -401,7 +404,7 @@ Sidebar Animation
 }
 
 /*
-=============== 
+===============
 Hero
 ===============
 */
@@ -482,7 +485,7 @@ Hero
 }
 
 /*
-=============== 
+===============
 Services
 ===============
 */
@@ -535,7 +538,7 @@ Services
 }
 
 /*
-=============== 
+===============
 Jobs
 ===============
 */
@@ -625,7 +628,7 @@ Jobs
 }
 
 /*
-=============== 
+===============
 Projects
 ===============
 */
@@ -747,7 +750,7 @@ Projects
 }
 
 /*
-=============== 
+===============
 Blog
 ===============
 */
@@ -844,6 +847,7 @@ Footer
 }
 .footer-links {
   margin: 0 auto 1rem auto;
+  justify-content: center;
 }
 .footer .social-link {
   color: var(--clr-white);
@@ -906,6 +910,7 @@ About Page
 }
 .about-text p {
   line-height: 2;
+  white-space: break-spaces;
 }
 .stack-container {
   width: 30rem;

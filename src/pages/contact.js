@@ -16,21 +16,28 @@ const contact = () => {
                 name="name"
                 placeholder="name"
                 className="form-control"
+                aria-label="Your name"
               />
               <input
                 type="email"
                 placeholder="email"
                 name="email"
                 className="form-control"
+                aria-label="Your email"
               />
               <textarea
                 name="message"
                 rows="5"
                 placeholder="message"
                 className="form-control"
+                aria-label="Your message"
               ></textarea>
             </div>
-            <button type="submit" className="submit-btn btn">
+            <button
+              type="submit"
+              className="submit-btn btn"
+              aria-label="submit form"
+            >
               submit here
             </button>
           </form>
