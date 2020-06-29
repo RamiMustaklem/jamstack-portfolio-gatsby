@@ -22,7 +22,8 @@ module.exports = {
       options: {
         exclude: [`/blog`, `/favicon`],
       },
-    }`gatsby-plugin-netlify`,
+    },
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
