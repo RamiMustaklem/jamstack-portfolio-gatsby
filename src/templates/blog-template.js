@@ -1,4 +1,4 @@
-/* import React from "react"
+import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 import ReactMarkdown from "react-markdown"
@@ -35,4 +35,3 @@ export const query = graphql`
 `
 
 export default ComponentName
- */
