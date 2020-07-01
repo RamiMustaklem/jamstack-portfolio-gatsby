@@ -6,8 +6,9 @@
 
 module.exports = {
   siteMetadata: {
-    title: "Rami Mustaklem Portfolio",
-    description: "This is Rami Mustaklem's Portfolio Site",
+    title: "Rami Mustaklem's Portfolio",
+    description:
+      "Rami Mustaklem's Portfolio, ramimustaklem.com, Full Stack Web Developer, React/Native, Angular, NodeJS, WordPress/WooCommerce.",
     author: "@RamiMustaklem",
     twitterUsername: "@RamiMustaklem",
     image: "/avataaars.png",

@@ -17,7 +17,7 @@ export default ({ data }) => {
     <Layout>
       <SEO
         title="Home"
-        description="Rami Mustaklem, ramimustaklem.com, Full Stack Web Developer, React/Native, Angular, NodeJS, WordPress/WooCommerce."
+        description="Rami Mustaklem's Portfolio, ramimustaklem.com, Full Stack Web Developer, React/Native, Angular, NodeJS, WordPress/WooCommerce."
       />
       <Hero />
       <Services />
