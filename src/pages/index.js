@@ -15,7 +15,10 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Home" description="this is our home page" />
+      <SEO
+        title="Home"
+        description="Rami Mustaklem, ramimustaklem.com, Full Stack Web Developer, React/Native, Angular, NodeJS, WordPress/WooCommerce."
+      />
       <Hero />
       <Services />
       <Jobs />
