@@ -7,8 +7,8 @@ const query = graphql`
   {
     file(relativePath: { eq: "avataaars.png" }) {
       childImageSharp {
-        fixed(width: 500) {
-          ...GatsbyImageSharpFixed_withWebp
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -17,7 +17,7 @@ const query = graphql`
 const Hero = () => {
   const {
     file: {
-      childImageSharp: { fixed },
+      childImageSharp: { fluid },
     },
   } = useStaticQuery(query)
 
@@ -35,7 +35,7 @@ const Hero = () => {
             <SocialLinks />
           </div>
         </article>
-        <Image fixed={fixed} className="hero-img" />
+        <Image fluid={fluid} className="hero-img" />
       </div>
     </header>
   )

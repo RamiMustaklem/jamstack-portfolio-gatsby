@@ -198,6 +198,7 @@ p {
   font-size: 1.75rem;
   color: var(--clr-grey-1);
   transition: var(--transition);
+  margin-right: 10px;
 }
 .social-link:hover {
   color: var(--clr-primary-5);
@@ -679,6 +680,9 @@ Projects
 .project-desc {
   word-spacing: 15px;
   color: var(--clr-grey-3);
+}
+.project-links a {
+  margin-right: 10px;
 }
 .project-stack {
   margin-bottom: 1rem;
