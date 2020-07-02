@@ -1,4 +1,4 @@
-const path = require("path")
+// const path = require("path")
 
 // create pages dynamically
 /* exports.createPages = async ({ graphql, actions }) => {
