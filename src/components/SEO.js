@@ -1,7 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import JsonLd from "./JsonLd"
 
 const query = graphql`
   {
@@ -44,8 +43,8 @@ const SEO = ({ title, description }) => {
       <meta name="og:description" content={siteDesc} />
       <meta name="og:image" content={`${siteUrl}${image}`} />
 
-      <JsonLd>
-        {{
+      <script type="application/ld+json">
+        {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Person",
           url: "https://www.ramimustaklem.com",
@@ -58,8 +57,8 @@ const SEO = ({ title, description }) => {
             telephone: "+972-54-634-8562",
             contactType: "Personal Phone",
           },
-        }}
-      </JsonLd>
+        })}
+      </script>
     </Helmet>
   )
 }
