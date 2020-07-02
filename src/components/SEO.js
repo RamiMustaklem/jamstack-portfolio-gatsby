@@ -29,6 +29,7 @@ const SEO = ({ title, description }) => {
     <Helmet htmlAttributes={{ lang: "en" }} title={`${title} | ${siteTitle}`}>
       <meta name="description" content={description || siteDesc} />
       <meta name="image" content={image} />
+
       {/* twitter cards */}
       <meta name="twitter:site" content="https://www.ramimustaklem.com/" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -38,10 +39,10 @@ const SEO = ({ title, description }) => {
       <meta name="twitter:image" content={`${siteUrl}${image}`} />
 
       {/* facebook cards */}
-      <meta name="og:url" content="https://www.ramimustaklem.com/" />
-      <meta name="og:title" content={siteTitle} />
-      <meta name="og:description" content={siteDesc} />
-      <meta name="og:image" content={`${siteUrl}${image}`} />
+      <meta property="og:url" content="https://www.ramimustaklem.com/" />
+      <meta property="og:title" content={siteTitle} />
+      <meta property="og:description" content={siteDesc} />
+      <meta property="og:image" content={`${siteUrl}${image}`} />
 
       <script type="application/ld+json">
         {JSON.stringify({
