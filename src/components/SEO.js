@@ -43,6 +43,8 @@ const SEO = ({ title, description }) => {
       <meta property="og:title" content={siteTitle} />
       <meta property="og:description" content={siteDesc} />
       <meta property="og:image" content={`${siteUrl}${image}`} />
+      <meta property="og:type" content={`website`} />
+      <meta property="fb:app_id" content={``} />
 
       <script type="application/ld+json">
         {JSON.stringify({
