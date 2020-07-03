@@ -58,7 +58,8 @@ const SEO = ({ title, description }) => {
           contactPoint: {
             "@type": "ContactPoint",
             telephone: "+972-54-634-8562",
-            contactType: "Personal Phone",
+            email: "i@ramimustaklem.com",
+            contactType: "Personal",
           },
         })}
       </script>
