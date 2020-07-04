@@ -32,7 +32,6 @@ module.exports = {
         exclude: [`/blog`, `/favicon`],
       },
     },
-    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -63,5 +62,6 @@ module.exports = {
         ],
       },
     },
+    "gatsby-plugin-netlify",
   ],
 }
