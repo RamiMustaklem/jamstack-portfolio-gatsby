@@ -42,7 +42,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: process.env.STRAPI_ENDPOINT,
+        apiURL: process.env.STRAPI_ENDPOINT || "http://localhost:1338",
         queryLimit: 1000, // Default to 100
         contentTypes: [`jobs`, `projects`],
         singleTypes: [`about`],
