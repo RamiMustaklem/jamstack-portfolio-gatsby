@@ -433,6 +433,7 @@ Hero
 }
 .hero-img {
   display: none;
+  max-width: 500px;
 }
 .hero-info h4 {
   color: var(--clr-grey-5);
@@ -564,7 +565,7 @@ Jobs
   margin: 0 0.5rem;
   transition: var(--transition);
   cursor: pointer;
-  padding: 0.25rem 0;
+  padding: 0.75rem 0.25rem;
   line-height: 1;
 }
 .job-btn:hover {

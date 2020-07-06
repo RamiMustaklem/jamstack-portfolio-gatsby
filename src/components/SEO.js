@@ -30,6 +30,16 @@ const SEO = ({ title, description }) => {
       <meta name="description" content={description || siteDesc} />
       <meta name="image" content={image} />
 
+      <meta
+        name="keyword"
+        content="ramimustaklem, Rami Mustaklem, Rami, Mustaklem, portfolio, gatsby, react, react native, javascript, developer"
+      />
+
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=yes"
+      />
+
       {/* twitter cards */}
       <meta name="twitter:site" content="https://www.ramimustaklem.com/" />
       <meta name="twitter:card" content="summary_large_image" />
