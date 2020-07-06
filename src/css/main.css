@@ -551,7 +551,7 @@ Jobs
 }
 .btn-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   margin-bottom: 4rem;
 }
@@ -566,6 +566,10 @@ Jobs
   cursor: pointer;
   padding: 0.25rem 0;
   line-height: 1;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .job-btn:hover {
   color: var(--clr-primary-5);
@@ -678,8 +682,9 @@ Projects
   font-size: 1.5rem;
 }
 .project-desc {
-  word-spacing: 15px;
+  /* word-spacing: 15px; */
   color: var(--clr-grey-3);
+  white-space: break-spaces;
 }
 .project-links a {
   margin-right: 10px;
@@ -693,15 +698,16 @@ Projects
   background: var(--clr-grey-9);
   color: var(--clr-grey-5);
   margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.85rem;
 }
-.about-stack span {
+/* .about-stack span {
   margin-top: 0.5rem;
-}
+} */
 .project-icon {
   color: var(--clr-primary-5);
   font-size: 1.25rem;
