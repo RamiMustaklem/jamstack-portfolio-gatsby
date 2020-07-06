@@ -11,7 +11,10 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
       <div className="project-info">
         <span className="project-number">0{index + 1}.</span>
         <h3>{title || "default title"}</h3>
-        <p className="project-desc">{description}</p>
+        <p
+          className="project-desc"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
         <div className="project-stack">
           {stack.map(item => {
             return <span key={item.id}>{item.title}</span>
