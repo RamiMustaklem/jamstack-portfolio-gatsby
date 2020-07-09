@@ -7,7 +7,7 @@ const query = graphql`
   {
     file(relativePath: { eq: "avataaars.png" }) {
       childImageSharp {
-        fluid(maxWidth: 500) {
+        fluid(maxWidth: 400) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

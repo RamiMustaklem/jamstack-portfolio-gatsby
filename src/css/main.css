@@ -433,7 +433,7 @@ Hero
 }
 .hero-img {
   display: none;
-  max-width: 500px;
+  max-width: 400px;
 }
 .hero-info h4 {
   color: var(--clr-grey-5);
