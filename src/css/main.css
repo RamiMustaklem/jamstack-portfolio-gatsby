@@ -681,6 +681,11 @@ Projects
   font-weight: 500;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
+  color: var(--clr-primary-5);
+  transition: color .2s ease-out;
+}
+.project-info:hover h3 {
+  color: var(--clr-primary-1);
 }
 .project-desc {
   /* word-spacing: 15px; */
