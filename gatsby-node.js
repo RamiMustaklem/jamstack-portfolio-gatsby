@@ -1,5 +1,5 @@
 const path = require("path")
-const { createRemoteFileNode } = require('gatsby-source-filesystem')
+const { createRemoteFileNode } = require("gatsby-source-filesystem")
 
 exports.onCreateNode = async ({
   node,
@@ -14,8 +14,6 @@ exports.onCreateNode = async ({
 
   if (node.internal.type === "StrapiProjects") {
     if (multipleImages.length > 0) {
-      multipleImages.forEach(el => console.log('el', el))
-
       const images = await Promise.all(
         multipleImages.map(({ url }) =>
           createRemoteFileNode({
