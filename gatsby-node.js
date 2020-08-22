@@ -40,7 +40,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
       projects: allStrapiProjects {
         edges {
           node {
-            strapiId
+            slug
           }
         }
       }
@@ -51,11 +51,11 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
   const projects = edges.map(({ node }) => node)
 
   if (projects) {
-    projects.forEach(({ strapiId }) => {
+    projects.forEach(({ slug }) => {
       createPage({
-        path: `/project/${strapiId}`,
+        path: `/project/${slug}/`,
         component: path.resolve(`src/templates/project.js`),
-        context: { id: strapiId },
+        context: { slug: slug },
       })
     })
   }

@@ -4,7 +4,16 @@ import { Link } from "gatsby"
 import Image from "gatsby-image"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 
-const Project = ({ description, title, github, stack, url, image, index, strapiId }) => {
+const Project = ({
+  description,
+  title,
+  github,
+  stack,
+  url,
+  image,
+  index,
+  slug,
+}) => {
   return (
     <article className="project">
       {image ? (
@@ -12,7 +21,7 @@ const Project = ({ description, title, github, stack, url, image, index, strapiI
       ) : null}
       <div className="project-info">
         <span className="project-number">0{index + 1}.</span>
-        <Link to={`/project/${strapiId}`}>
+        <Link to={`/project/${slug}/`}>
           <h3>{title || "default title"}</h3>
         </Link>
         <p
@@ -48,7 +57,7 @@ Project.propTypes = {
   description: PropTypes.string.isRequired,
   image: PropTypes.object.isRequired,
   stack: PropTypes.arrayOf(PropTypes.object).isRequired,
-  strapiId: PropTypes.number.isRequired,
+  slug: PropTypes.string.isRequired,
 }
 
 export default Project
