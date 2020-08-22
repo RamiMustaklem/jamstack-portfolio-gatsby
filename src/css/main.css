@@ -715,14 +715,28 @@ Projects
   margin-bottom: 1rem;
   display: inline-block;
 }
-.project-images {
+.project-images, .content p {
   margin: 3rem 0;
   width: 100%;
   display: inline-block;
 }
-.project-images p {
+.project-template .content h4 {
   font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-3);
   display: inline-block;
+  letter-spacing: initial;
+  text-transform: initial;
+  font-size: 1.5rem;
+}
+.project-template .content h4 a {
+  text-decoration: underline;
+}
+.content img {
+  max-width: 100%;
+}
+.project-images em {
+  color: var(--clr-grey-3);
 }
 .project-stack span,
 .about-stack span {
@@ -802,6 +816,13 @@ Projects
   .project-images {
     margin: 1rem 0.5rem;
     width: 48%;
+  }
+  .content p {
+    margin: 2rem 0.5rem;
+    width: 48%;
+  }
+  .content h4 {
+    margin: 2rem 0.5rem;
   }
 }
 

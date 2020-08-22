@@ -30,10 +30,10 @@ export const query = graphql`
       nodes {
         github
         id
-        strapiId
         description
         title
         url
+        slug
         image {
           childImageSharp {
             fluid {

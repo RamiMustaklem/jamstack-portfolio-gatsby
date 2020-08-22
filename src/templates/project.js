@@ -4,16 +4,35 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa/index"
 import Image from "gatsby-image/index"
+import ReactMarkdown from "react-markdown"
+import htmlParser from "react-markdown/plugins/html-parser"
 
 const ProjectPage = ({ data: { strapiProjects: project } }) => {
   if (!project) return null
-  const { title, description, image, images, url, github, stack } = project
+  const {
+    title,
+    description,
+    image,
+    images,
+    url,
+    github,
+    stack,
+    updated_at,
+    content,
+  } = project
+
+  const parseHtml = htmlParser({
+    isValidNode: node => node.type !== "script",
+    processingInstructions: [],
+  })
+
   return (
     <Layout>
       <SEO title={`${project.title} Project`} description={title} />
       <section className="blog-template project-template">
         <div className="section-center clearfix">
           <h3>{title}</h3>
+          <h6>{updated_at}</h6>
 
           <div className="project-links">
             {github && (
@@ -54,10 +73,19 @@ const ProjectPage = ({ data: { strapiProjects: project } }) => {
                     alt={image.alternativeText}
                     fluid={image.localFile.childImageSharp.fluid}
                   />
-                  <p>{image.caption}</p>
+                  <em>{image.caption}</em>
                 </div>
               ))
             : null}
+
+          {content ? (
+            <ReactMarkdown
+              source={content}
+              escapeHtml={false}
+              astPlugins={[parseHtml]}
+              className="content"
+            />
+          ) : null}
 
           <Link to="/projects" className="btn center-btn">
             projects
@@ -69,8 +97,8 @@ const ProjectPage = ({ data: { strapiProjects: project } }) => {
 }
 
 export const pageQuery = graphql`
-  query ProjectQuery($id: Int!) {
-    strapiProjects(strapiId: { eq: $id }) {
+  query ProjectQuery($slug: String!) {
+    strapiProjects(slug: { eq: $slug }) {
       featured
       github
       description
@@ -78,6 +106,7 @@ export const pageQuery = graphql`
       title
       updated_at(fromNow: true)
       url
+      content
       stack {
         id
         title
