@@ -36,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/blog`, `/favicon`],
+        exclude: [`/favicon`],
       },
     },
     {
@@ -51,7 +51,7 @@ module.exports = {
       options: {
         apiURL: process.env.STRAPI_ENDPOINT || "http://localhost:1338",
         queryLimit: 1000, // Default to 100
-        contentTypes: [`jobs`, `projects`],
+        contentTypes: [`jobs`, `projects`, `blogs`],
         singleTypes: [`about`],
       },
     },
