@@ -21,7 +21,7 @@ const Project = ({
       ) : null}
       <div className="project-info">
         <span className="project-number">0{index + 1}.</span>
-        <Link to={`/project/${slug}/`}>
+        <Link to={`/project/${slug}`}>
           <h3>{title || "default title"}</h3>
         </Link>
         <p
