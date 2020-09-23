@@ -19,7 +19,7 @@ module.exports = {
     author: "@RamiMustaklem",
     twitterUsername: "@RamiMustaklem",
     image: "/avataaars.png",
-    siteUrl: "https://ramimustaklem.com/",
+    siteUrl: "https://ramim.dev",
   },
   plugins: [
     {

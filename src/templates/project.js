@@ -19,6 +19,7 @@ const ProjectPage = ({ data: { strapiProjects: project } }) => {
     stack,
     updated_at,
     content,
+    slug,
   } = project
 
   const parseHtml = htmlParser({
@@ -28,7 +29,11 @@ const ProjectPage = ({ data: { strapiProjects: project } }) => {
 
   return (
     <Layout>
-      <SEO title={`${project.title} Project`} description={title} />
+      <SEO
+        title={`${project.title} Project`}
+        description={title}
+        page={`/project/${slug}`}
+      />
       <section className="blog-template project-template">
         <div className="section-center clearfix">
           <h3>{title}</h3>
@@ -106,6 +111,7 @@ export const pageQuery = graphql`
       title
       updated_at(fromNow: true)
       url
+      slug
       content
       stack {
         id

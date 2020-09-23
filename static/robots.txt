@@ -1,4 +1,4 @@
 User-Agent: *
 Disallow:
 
-Sitemap: https://www.ramimustaklem.com/sitemap.xml
+Sitemap: https://ramim.dev/sitemap.xml

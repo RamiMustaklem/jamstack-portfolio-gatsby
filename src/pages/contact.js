@@ -5,7 +5,11 @@ import SEO from "../components/SEO"
 const contact = () => {
   return (
     <Layout>
-      <SEO title="Contact" />
+      <SEO
+        title="Contact"
+        description="Contact Rami Mustaklem"
+        page="/contact"
+      />
       <section className="contact-page">
         <article className="contact-form">
           <h3>get in touch</h3>
@@ -31,7 +35,7 @@ const contact = () => {
                 placeholder="message"
                 className="form-control"
                 aria-label="Your message"
-              ></textarea>
+              />
             </div>
             <button
               type="submit"

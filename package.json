@@ -7,7 +7,7 @@
   "author": {
     "name": "Rami Mustaklem",
     "email": "ramimustaklem@gmail.com",
-    "url": "https://ramimustaklem.com"
+    "url": "https://ramim.dev"
   },
   "scripts": {
     "build": "gatsby build",

@@ -16,7 +16,8 @@ const query = graphql`
     }
   }
 `
-const SEO = ({ title, description }) => {
+
+const SEO = ({ title, description, page }) => {
   const { site } = useStaticQuery(query)
   const {
     siteDesc,
@@ -25,6 +26,8 @@ const SEO = ({ title, description }) => {
     image,
     twitterUsername,
   } = site.siteMetadata
+  const canonical = page ? page : ""
+
   return (
     <Helmet htmlAttributes={{ lang: "en" }} title={`${title} | ${siteTitle}`}>
       <meta name="description" content={description || siteDesc} />
@@ -40,8 +43,10 @@ const SEO = ({ title, description }) => {
         content="width=device-width, initial-scale=1, shrink-to-fit=yes"
       />
 
+      <link rel="canonical" href={`${siteUrl}${canonical}`} />
+
       {/* twitter cards */}
-      <meta name="twitter:site" content="https://www.ramimustaklem.com/" />
+      <meta name="twitter:site" content={siteUrl} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={twitterUsername} />
       <meta name="twitter:title" content={siteTitle} />
@@ -49,7 +54,7 @@ const SEO = ({ title, description }) => {
       <meta name="twitter:image" content={`${siteUrl}${image}`} />
 
       {/* facebook cards */}
-      <meta property="og:url" content="https://www.ramimustaklem.com/" />
+      <meta property="og:url" content={siteUrl} />
       <meta property="og:title" content={siteTitle} />
       <meta property="og:description" content={siteDesc} />
       <meta property="og:image" content={`${siteUrl}${image}`} />
@@ -60,7 +65,7 @@ const SEO = ({ title, description }) => {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Person",
-          url: "https://www.ramimustaklem.com",
+          url: siteUrl,
           name: "Rami Mustaklem' Portfolio",
           jobTitle: "Full Stack Developer",
           image: `${siteUrl}${image}`,
