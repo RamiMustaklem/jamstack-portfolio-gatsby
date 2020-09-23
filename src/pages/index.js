@@ -17,8 +17,8 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Home"
-        description="Rami Mustaklem, Full Stack Web Developer, React/Native, Angular, NodeJS, WordPress/WooCommerce."
+        title="Full Stack Web Developer Portfolio"
+        description="My Personal Portfolio, Rami Mustaklem, Full Stack Web Developer, Performance Optimization, JavaScript, React/Native, Angular, NodeJS and WordPress/WooCommerce."
       />
       <Hero />
       <Services />
@@ -30,7 +30,9 @@ export default ({ data }) => {
 }
 export const query = graphql`
   {
-    allStrapiProjects(filter: { featured: { eq: true } }) {
+    allStrapiProjects(
+      filter: { display: { eq: true }, featured: { eq: true } }
+    ) {
       nodes {
         github
         id

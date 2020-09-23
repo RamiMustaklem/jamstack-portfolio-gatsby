@@ -20,7 +20,10 @@ const ProjectPage = ({ data: { strapiProjects: project } }) => {
     updated_at,
     content,
     slug,
+    meta,
   } = project
+
+  const { title: metaTitle, description: metaDescription } = meta
 
   const parseHtml = htmlParser({
     isValidNode: node => node.type !== "script",
@@ -30,8 +33,8 @@ const ProjectPage = ({ data: { strapiProjects: project } }) => {
   return (
     <Layout>
       <SEO
-        title={`${project.title} Project`}
-        description={title}
+        title={metaTitle}
+        description={metaDescription}
         page={`/project/${slug}`}
       />
       <section className="blog-template project-template">
@@ -113,6 +116,10 @@ export const pageQuery = graphql`
       url
       slug
       content
+      meta {
+        title
+        description
+      }
       stack {
         id
         title

@@ -37,7 +37,7 @@ exports.onCreateNode = async ({
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
   const result = await graphql(`
     {
-      projects: allStrapiProjects {
+      projects: allStrapiProjects(filter: { display: { eq: true } }) {
         edges {
           node {
             slug

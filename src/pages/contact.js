@@ -7,7 +7,7 @@ const contact = () => {
     <Layout>
       <SEO
         title="Contact"
-        description="Contact Rami Mustaklem"
+        description="Contact me regarding working on Performance Optimization, JavaScript, React, Gatsby, NextJS, Angular and WordPress/WooCommerce."
         page="/contact"
       />
       <section className="contact-page">

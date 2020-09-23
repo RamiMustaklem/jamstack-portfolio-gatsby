@@ -13,7 +13,7 @@ const ProjectsPage = ({
     <Layout>
       <SEO
         title="Projects"
-        description="Projects I have worked on"
+        description="Projects I have worked on and performance optimized using WordPress/WooCommerce, React, Gatsby, Angular, Bootstrap, Javascript."
         page="/projects"
       />
       <section className="projects-page">
@@ -24,7 +24,7 @@ const ProjectsPage = ({
 }
 export const query = graphql`
   {
-    allStrapiProjects {
+    allStrapiProjects(filter: { display: { eq: true } }) {
       nodes {
         github
         id
