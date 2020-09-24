@@ -14,7 +14,7 @@ const ProjectsPage = ({
       <SEO
         title="Projects"
         description="Projects I have worked on and performance optimized using WordPress/WooCommerce, React, Gatsby, Angular, Bootstrap, Javascript."
-        page="/projects"
+        page="/projects/"
       />
       <section className="projects-page">
         <Projects projects={projects} title="all projects" />

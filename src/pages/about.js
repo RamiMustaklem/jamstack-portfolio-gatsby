@@ -16,7 +16,7 @@ const About = ({
       <SEO
         title="About Me"
         description="About me, Rami Mustaklem, Full Stack Web Developer, Performance optimization, JavaScript, React, Gatsby, NextJS, Angular and WordPress/WooCommerce."
-        page="/about"
+        page="/about/"
       />
       <section className="about-page">
         <div className="section-center about-center">

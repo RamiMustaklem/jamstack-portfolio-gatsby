@@ -26,7 +26,6 @@ const SEO = ({ title, description, page }) => {
     image,
     twitterUsername,
   } = site.siteMetadata
-  const canonical = page ? page : ""
 
   return (
     <Helmet htmlAttributes={{ lang: "en" }} title={`${title} | ${siteTitle}`}>
@@ -43,10 +42,10 @@ const SEO = ({ title, description, page }) => {
         content="width=device-width, initial-scale=1, shrink-to-fit=yes"
       />
 
-      <link rel="canonical" href={`${siteUrl}${canonical}`} />
+      <link rel="canonical" href={`${siteUrl}${page}`} />
 
       {/* twitter cards */}
-      <meta name="twitter:site" content={`${siteUrl}${canonical}`} />
+      <meta name="twitter:site" content={`${siteUrl}${page}`} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={twitterUsername} />
       <meta name="twitter:title" content={title} />
@@ -54,7 +53,7 @@ const SEO = ({ title, description, page }) => {
       <meta name="twitter:image" content={`${siteUrl}${image}`} />
 
       {/* facebook cards */}
-      <meta property="og:url" content={`${siteUrl}${canonical}`} />
+      <meta property="og:url" content={`${siteUrl}${page}`} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={`${siteUrl}${image}`} />

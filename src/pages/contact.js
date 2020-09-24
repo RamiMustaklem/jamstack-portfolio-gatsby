@@ -8,7 +8,7 @@ const contact = () => {
       <SEO
         title="Contact"
         description="Contact me regarding working on Performance Optimization, JavaScript, React, Gatsby, NextJS, Angular and WordPress/WooCommerce."
-        page="/contact"
+        page="/contact/"
       />
       <section className="contact-page">
         <article className="contact-form">

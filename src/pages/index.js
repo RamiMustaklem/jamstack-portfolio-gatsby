@@ -19,6 +19,7 @@ export default ({ data }) => {
       <SEO
         title="Full Stack Web Developer Portfolio"
         description="My Personal Portfolio, Rami Mustaklem, Full Stack Web Developer, Performance Optimization, JavaScript, React/Native, Angular, NodeJS and WordPress/WooCommerce."
+        page="/"
       />
       <Hero />
       <Services />
