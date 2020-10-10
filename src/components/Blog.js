@@ -10,7 +10,6 @@ const Blog = ({ title, image, date, category, desc, url }) => {
       aria-label="Navigate to Blog Post"
       key={title}
       target="_blank"
-      rel="noreferrer"
     >
       <article>
         {image ? (
